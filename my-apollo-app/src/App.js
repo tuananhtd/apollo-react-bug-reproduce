@@ -24,7 +24,7 @@ class Book extends React.Component {
   }
 }  
 
-const BookGraphQLComponent = graphql(QUERY)(Book);
+const BookGraphQLComponent = graphql(QUERY, {options: {pollInterval: 10 * 1000}})(Book);
 
 class App extends React.Component {
 
